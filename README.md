@@ -1,71 +1,40 @@
-# Getting Started with Create React App
+## Task
+You've learned about React Context and how it allows you to define global state without passing individual props down through each component. One of the most common use cases for Context is to define a theme for your application. In this exercise, you'll create a light-dark theme switcher.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The starter code includes all the necessary UI elements, as well as a Switch component to toggle the theme. Your goal is to implement the missing functionality inside ThemeContext.js. ThemeContext already exports a ThemeProvider component and a useTheme hook. At the moment, they don't do anything and return dummy values.
 
-## Available Scripts
+### image
 
-In the project directory, you can run:
 
-### `npm start`
+### steps
+You'll need to implement both the ThemeProvider component and the useTheme hook inside the ThemeContext.js file to complete this exercise.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+ThemeProvider should render a context provider component and inject as the context value an object with two properties: a theme property that is a string, that can be either light or dark, and a function named toggleTheme that enables you to toggle the theme. The useTheme hook should return that context object.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Note: Before you begin, make sure you understand how to work with the Coursera Code Lab for the Advanced React course.
 
-### `npm test`
+If you run npm start and view the app in the browser, you'll notice that the starting React app works as is. The app outputs a simple view with a header, page and a switch widget in the top right corner to change the theme.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Steps
+Step 1
+Open the ThemeContext.js file.
 
-### `npm run build`
+Create a ThemeContext object using React.createContext().
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Implement the ThemeProvider component. It should accept a children prop and return a ThemeContext.Provider component. The ThemeContext.Provider receives an object as its value prop, with a theme string and a toggleTheme function.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+toggleTheme should toggle the theme between light and dark.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Step 2
+Implement the useTheme hook. It should return the theme and toggleTheme values from the ThemeContext.
 
-### `npm run eject`
+Step 3
+Open the Switch/index.js file. Add an onChange prop to the input element and pass a callback function, as the event handler, to change the theme. You don’t need to use the event argument in this case.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Step 4
+Verify that the app works as expected. You should be able to toggle the theme between light and dark. Notice how the background color of the page changes, as well as the color of the text.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+###image
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# reactContextApp
