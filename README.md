@@ -5,6 +5,9 @@ The starter code includes all the necessary UI elements, as well as a Switch com
 
 ### image
 
+<img width="622" alt="little1" src="https://user-images.githubusercontent.com/98294205/216720703-cfedcd56-6827-43f5-8a08-3a8e862e4f88.png">
+
+
 
 ### steps
 You'll need to implement both the ThemeProvider component and the useTheme hook inside the ThemeContext.js file to complete this exercise.
@@ -35,6 +38,10 @@ Step 4
 Verify that the app works as expected. You should be able to toggle the theme between light and dark. Notice how the background color of the page changes, as well as the color of the text.
 
 ###image
+<img width="615" alt="little" src="https://user-images.githubusercontent.com/98294205/216720738-e737fa23-dec2-4a83-a9f2-b24a14558a6b.png">
+
+
+
 
 
 
